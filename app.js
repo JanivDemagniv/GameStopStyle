@@ -3,7 +3,7 @@ $(document).ready(() => {
         $('#hidden-menu').css({
             'display': 'block'
         })
-        let coverDiv = '<div class="shalom">shalom</div>'
+        let coverDiv = '<div class="cover-back"></div>'
         $('#hidden-menu').after(coverDiv)
     })
 
@@ -11,6 +11,17 @@ $(document).ready(() => {
         $('#hidden-menu').css({
             'display': 'none'
         })
-        $('.shalom').remove()
+        $('.cover-back').remove()
+    })
+
+    $('#search-bar').focusin(() => {
+        $('#search-bar').css({
+            'box-shadow': '0 0 5px #000'
+        })
+    })
+    $('#search-bar').focusout(() => {
+        $('#search-bar').css({
+            'box-shadow': 'none'
+        })
     })
 })
