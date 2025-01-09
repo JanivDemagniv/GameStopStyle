@@ -35,15 +35,15 @@ body {
     position: fixed;
     top: 70px;
     left: 0;
-    opacity: 0.4;
+    opacity: 0;
     z-index: 0;
     background-color: #232323;
 }
 
 #hidden-menu {
-    display: none;
+    /* display: none; */
     position: fixed;
-    left: 0;
+    left: -24vw;
     top: 0;
     background-color: #dcdcdc;
     z-index: 10;

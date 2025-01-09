@@ -1,17 +1,16 @@
 $(document).ready(() => {
     $('#menu-open').click(() => {
-        $('#hidden-menu').css({
-            'display': 'block'
-        })
+        $('#hidden-menu').animate({ left: '0' }, 500)
         let coverDiv = '<div class="cover-back"></div>'
         $('#hidden-menu').after(coverDiv)
+        $('.cover-back').animate({ opacity: '0.4' }, 500)
     })
 
     $('#menu-close').click(() => {
-        $('#hidden-menu').css({
-            'display': 'none'
+        $('#hidden-menu').animate({ left: '-1000' }, 500)
+        $('.cover-back').animate({ opacity: '0' }, 500, 'swing', () => {
+            $('.cover-back').remove()
         })
-        $('.cover-back').remove()
     })
 
     $('#search-bar').focusin(() => {
