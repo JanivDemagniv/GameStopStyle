@@ -63,10 +63,7 @@ $(document).ready(() => {
             </div>`}
 
 
-    cards.forEach((card_deal) => {
-        $('.deal-slider').append(card(card_deal.num, card_deal.title, card_deal.subtitle, card_deal.details))
-        console.log(card_deal);
 
-    })
+    $('.deal-slider').append(card(0, 'card_deal.title', 'card_deal.subtitle', 'card_deal.details'))
 
 })
