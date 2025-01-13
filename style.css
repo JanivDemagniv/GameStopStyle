@@ -13,12 +13,13 @@ body {
     position: fixed;
     top: 0;
     display: flex;
-    background-color: red;
+    background-color: #dcdcdc;
     width: 100%;
     height: 70px;
     justify-content: flex-start;
     align-items: center;
     z-index: 10;
+    box-shadow: 0px 0px 15px 1px #7d7d7d;
 }
 
 .nav-item {
@@ -57,7 +58,7 @@ body {
 #navigate {
     margin-top: 70px;
     background-color: #b4b4b4;
-    height: 30px;
+    height: 70px;
 
     ul {
         height: 100%;
@@ -130,4 +131,81 @@ body {
     cursor: pointer;
     background-color: rgb(35, 35, 35, 0.4);
     border: none;
+}
+
+#deal-slider {
+    margin-top: 20px;
+    border: 1px solid red;
+    padding: 10px;
+    position: relative;
+    height: 450px;
+}
+
+.btn-deal-slide-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+.btn-deal-slide {
+    height: 100%;
+    width: 70px;
+    cursor: pointer;
+    background-color: rgb(35, 35, 35, 0.4);
+    border: none;
+}
+
+
+.card {
+    width: 250px;
+    height: 400px;
+    margin: 10px;
+    padding: 0 5px 5px 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 0px 15px 5px #7d7d7d;
+    position: absolute;
+    z-index: -15;
+}
+
+.card .card-img {
+    width: 250px;
+    margin-bottom: 5px;
+}
+
+.card .card-title {
+    font-size: 2rem;
+    margin: 5px;
+}
+
+.card .card-subtitle {
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.card .card-details {
+    font-size: 0.7rem;
+    text-align: justify;
+}
+
+.card .action-section {
+    justify-self: end;
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    background-color: #232323;
+    width: 100%;
 }

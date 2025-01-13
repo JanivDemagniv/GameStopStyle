@@ -29,7 +29,7 @@ $(document).ready(() => {
 
     // Initialize images
     $('.img-container').append(`<img src='images/1.jpg' class='now' alt="img" id="img1"/>`);
-    images.slice(1).forEach((img) => {
+    images.forEach((img) => {
         $('.img-container').append(`<img src='images/${img}.jpg' class='next' alt="img" id="img${img}"/>`);
     });
 
@@ -49,4 +49,24 @@ $(document).ready(() => {
         currentIndex = (currentIndex + 1) % images.length;
         showImage(currentIndex);
     });
+
+    let card = (num, title, subtitle, details) => {
+        return `
+    <div class="card" style="left:${num * 150}px">
+                <img class="card-img" src="https://placehold.co/400x400" alt="deal-pic">
+                <h3 class="card-title">${title}</h3>
+                <h6 class="card-subtitle">${subtitle}</h6>
+                <p class="card-details">
+                    ${details}
+                </p>
+                <div class="action-section">yo</div>
+            </div>`}
+
+
+    cards.forEach((card_deal) => {
+        $('.deal-slider').append(card(card_deal.num, card_deal.title, card_deal.subtitle, card_deal.details))
+        console.log(card_deal);
+
+    })
+
 })
